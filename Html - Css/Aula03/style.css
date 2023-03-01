@@ -1,0 +1,37 @@
+@charset "utf-8";
+*{
+    margin: 10px;
+}
+
+Body{
+    background-color: black;
+    color: white;
+}
+
+div{
+    width: 90%px;
+    height: 600px;
+}
+
+table{
+    border-collapse: collapse;
+    display: inline-block;
+    width: 47%;
+}
+
+tbody{
+    height: 400px;
+}
+
+td{
+    border: 1px solid white;
+    text-align: center;
+}
+
+td#texto{
+    width: 60%;
+}
+
+td#texto2{
+    height: 60%;
+}
