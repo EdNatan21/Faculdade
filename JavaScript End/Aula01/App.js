@@ -51,7 +51,7 @@ entradaDados.question('Digite a Nota1: \n', function(Nota1){
                      Conversão de dados de String para Numero
                         parseInt() - converte uma string para inteiro
                         parseFloat() - converte uma string para numero decimal 
-                        Number() - converte uma string para numero (independente se seá int ou float)
+                        Number() - converte uma string para numero (independente se será int ou float)
                 */
             
             media = Number (Valor1) + Number (Valor2) + Number(Valor3) + Number(Valor4)/4;
