@@ -1,6 +1,6 @@
-//Iport dos arquievos e funções
+//Import dos arquievos e funções
 var readline = require('readline')
-var matematica = require('./Modulo/Tabuada')
+var  = require('./Modulo/Tabuada')
 
 var entradaDados = readline.createInterface({
     input : process.stdin,
