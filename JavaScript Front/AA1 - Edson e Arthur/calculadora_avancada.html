@@ -2,10 +2,9 @@
     <head>
         <title>Calculadora Avançada - AAI</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script src="js/calculadora.js"></script>
+		<script src="js/calculadora.js" defer></script>
     </head>
 	<body>
-        
         <div id="conteudo">
             <h1 id="titulo">
                 CALCULADORA - Avançada (AAI)
@@ -15,17 +14,17 @@
 					<input type="text" name="txtn1" value="" id="valor" placeholder="0"> <br>
 
 					<div class="divOperacoes">
-						<div name="btnSomar" id="somar" class="botao" onclick="calcular('SOMAR')" >+</div>
-						<div name="btnSomar" id="subtrair" class="botao" onclick="operacoes('SUBTRAIR')" >-</div>
+						<div name="btnSomar" id="somar" class="botao">+</div>
+						<div name="btnSomar" id="subtrair" class="botao" >-</div>
 					</div>
 
 					<div class="divOperacoes">
-						<div name="btnSomar" id="multiplicar" class="botao" onclick="operacoes('MULTIPLICAR')">*</div>
-						<div name="btnSomar" id="dividir" class="botao" onclick="operacoes('DIVIDIR')">/</div>
+						<div name="btnSomar" id="multiplicar" class="botao" >*</div>
+						<div name="btnSomar" id="dividir" class="botao" >/</div>
 					</div>
 					<div class="divOperacoes">
-						<div name="btnSomar" id="ce" class="botao" onclick="limpar()" >CE</div>
-						<div name="btnCalcular" id="calcular" class="botao" onclick="calcular('IGUAL')">=</div>
+						<div name="btnSomar" id="limpar" class="botao">CE</div>
+						<div name="btnCalcular" id="calcular" class="botao">=</div>
 					</div>
 				</form>
             </div>

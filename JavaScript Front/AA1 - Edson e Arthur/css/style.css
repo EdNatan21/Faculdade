@@ -4,7 +4,6 @@ body{
     display: flex;
     align-items: center;
 }
-
 #conteudo{
     width: 800px;
     height: 638px;
@@ -71,6 +70,9 @@ body{
 }
 
 #resultado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: inherit;
     height: 100px;
     background-color: cornflowerblue;
