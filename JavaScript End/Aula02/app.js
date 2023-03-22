@@ -1,6 +1,6 @@
 //Import dos arquievos e funções
 var readline = require('readline')
-var  = require('./Modulo/Tabuada')
+var entradaDados = require('./Modulo/Tabuada')
 
 var entradaDados = readline.createInterface({
     input : process.stdin,
