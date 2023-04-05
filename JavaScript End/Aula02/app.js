@@ -1,4 +1,4 @@
-//Import dos arquievos e funções
+//Import dos arquivos e funções
 var readline = require('readline')
 var entradaDados = require('./Modulo/Tabuada')
 

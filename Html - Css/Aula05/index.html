@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula05 - Formulários</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Contatos</h1>
+    <form name="contatos" action="" method="get">
+        <label for="nome">NOME:</label>
+        <input type="text" name="txtNome" maxlength="20" size="25px" placeholder="Digite seu Nome" id="nome" required>
+
+        <label for="idade">IDADE:</label>
+        <input type="number" id="idade" name="idade" min="0" max="100" required>
+
+        <label for="email">E-MAIL:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="sexo">SEXO:</label>
+        <input type="radio" name="sexo" id="M" class="sex" value="M"> M
+        <input type="radio" name="sexo" id="F" class="sex"
+        value="F"> F
+
+        <input type="submit" value="Enviar">
+
+        <input type="reset" value="Apagar">
+    </form>
+</body>
+</html>

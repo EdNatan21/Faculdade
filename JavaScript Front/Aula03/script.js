@@ -1,59 +1,83 @@
+/*********************************************************
+ * Objetivo: Manipular elementos HTML pelo JavaScript
+ * Autor: Marcel
+ * Data: 08/03/2023
+ * Versão: 1.0
+ ************************************************************/
+
+//Criamos um objeto que recebe todas as caracteristicas do botão
 var botaoTabela = document.getElementById('tabela');
+var div = document.getElementById('listaDeNomes');
 
-const criarElementos =  function(){
-    //Recebe o nome digitado dentro da caixa de texto
-    let nome = document.getElementById('nome').value;
-    //Cria um objeto que recebe todas as caracteristicas da div 
-    let div = document.getElementById('listaDeNomes')
-    //createElement - Permite criar pelo JS uma tag HTML 
-    let tdNomes = document.createElement('td');
-    tdNomes.innerText = nome;
-    let tdNumero = document.createElement('td');
-    tdNumero.innerText = 'none';
-    let linhaTabela = document.createElement('tr');
+//Cria os elementos table, tr e td para criar a tabela
+var tabela = document.createElement('table');
+var botaoCriar = document.querySelector('input#criar')
 
-    linhaTabela.appendChild(tdNomes);
-    linhaTabela.appendChild(tdNumero);
 
-    let tabela = document.getElementsByTagName('table')[0];
+// #Teste
+// const criarElementos = function (){
+//     //Recebe o nome digitado dentro da caixa de texto
+//     let nome = document.getElementById('nome').value; 
 
-    tabela.appendChild(linhaTabela);
+//     // Cria um objeto que recebe todas as caracteristicas da div
+//     let div = document.getElementById('listaDeNomes');
 
-    let nomeItem = document.createTextNode(nome);
+//     //createElement - permite criar pelo JS uma tag HTML
+//     let ulNomes = document.createElement('ul');
+//     let liNomes = document.createElement('li');
+//     let nomeItem = document.createTextNode(nome);
 
-    //Associando a ul a div de nomes
-    div.appendChild(ulNomes);
+//     //Associando a ul a div de nomes
+//     div.appendChild(ulNomes);
 
-    //appndChild - Permite associar um elemento, filho ao elemnto pai 
-    ulNomes.appendChild(liNomes);
-    liNomes.appendChild(nomeItem);
+//     //appendChild - permite associar um elemento 
+//     //filho ao elemento pai
+//     ulNomes.appendChild(liNomes);
 
-    //Serve para ajudar a testar o botão(alert('Teste'));
-};
+//     liNomes.appendChild(nomeItem);
+// };
 
-//Cria a tabela e sua estrutura de cabeçalho
-const criarTabela = function(){
-
+//Cria a tabela principal com a linha dos titulos(nome e telefone)
+const criarTabela = function (){
     //Recebe a div para colocar a tabela
-    let div = document.getElementsByTagName('listaDeNomes');
-
-    //Cria os elementos table, tr e td para criar a tabela
-    let table = document.createElement('table');
-    let linhaTipo = document.createElement('tr');
+    let linhaTitulo = document.createElement('tr');
     let colunaNome = document.createElement('td');
     let colunaTelefone = document.createElement('td');
+
+    //Cria dois objetos de texto para serem colocados nas celulas
     let tituloNome = document.createTextNode('Nome');
-    let tituloTelefone = document.createElement('Telefone');
+    let tituloTelefone = document.createTextNode('Telefone');
 
-    div.appendChild(table);
-    tabela.appendChild(linhaTipo);
-    linhaTipo.appendChild(colunaNome);
-    linhaTipo.appendChild(colunaTelefone);
+    //Associando os elementos filhos aos elementos pais
+    div.appendChild(tabela);
+    tabela.appendChild(linhaTitulo);
+    linhaTitulo.appendChild(colunaNome);
+    linhaTitulo.appendChild(colunaTelefone);
 
-    //Associando os objetos de texto para serem titulos das
+    //Associandos os objetos de texto para serem titulos das celulas
     colunaNome.appendChild(tituloNome);
-    colunaTelefone.appendChild(tituloTelefone)
+    colunaTelefone.appendChild(tituloTelefone);
 };
 
-//Cria um evento de escuta para o botão, utilizando a ação do click
-botaoTabela.addEventListener('click', function(){criarElementos();});
+//Cria os itens dentro da tabela principal
+const criarItensTabela = function(){
+    let entradaNome = document.querySelector('input#nome').value
+    let entradaTelefone = document.querySelector('input#telefone').value
+
+    let linhaItem = document.createElement('tr')
+    let colunaItemNome = document.createElement('td')
+    let colunaItemTelefone = document.createElement('td')
+
+    let textoNome = document.createTextNode(entradaNome)
+    let textoTelefone = document.createTextNode(entradaTelefone)
+
+    tabela.appendChild(linhaItem)
+    linhaItem.appendChild(colunaItemNome)
+    linhaItem.appendChild(colunaItemTelefone)
+    colunaItemNome.appendChild(textoNome)
+    colunaItemTelefone.appendChild(textoTelefone)
+}
+
+//Cria um evento de escuta para o botão utilizando a ação do click
+botaoTabela.addEventListener('click', function(){criarTabela();})
+botaoCriar.addEventListener('click', function(){criarItensTabela();})
