@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+Body{
+    background-image: linear-gradient(aquamarine, aqua);
+    height: 660px;
+}
+
+header{
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.233);
+}
+
+#div1{
+    text-align: center;
+}
+
+input{
+    height: 30px;
+    width: 150px;
+}
+
+input:focus{
+    border: 1.8px solid black;
+    border-radius: 8px;
+
+    background-color: black;
+    color: white;
+}
+
+#div3{
+    text-align: center;
+    padding: 5px;
+}
+
+label{
+    font-size: 1.3em;
+}
+

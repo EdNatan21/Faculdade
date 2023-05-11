@@ -1,0 +1,225 @@
+/*Reset do CSS*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 0;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #1e8fff;
+}
+
+/*Serve para centralizar todas as seções do site (W: 1200 e H: inherit)*/
+.principal{
+    width: 1200px;
+    height: inherit;
+    background-color: darksalmon;
+    margin: auto;
+    overflow: hidden;
+}
+
+#logo{
+    width: 150px;
+    height: inherit;
+    background-color: cadetblue;
+    /*Permite alinhar dois container lado a lado
+    Para funcionar, todos os containers precisar ser float
+    */
+    float: left;
+}
+
+#menu{
+    width: 900px;
+    height: inherit;
+    background-color: darkorange;
+    float: left;
+}
+
+#redesSociais{
+    width: 100px;
+    height: inherit;
+    /*Elemina o processo de float desta camada em diante, ou seja, todos
+        os containers voltam a serem criados um embaixo do outro
+    */
+    /*clear: both;*/
+
+    float: right;
+    padding-top: 15px;
+}
+
+#menu ul{
+    width: inherit;
+    height: inherit;
+    background-color: #000000;
+
+}
+
+#menu ul li{
+    width: 20%;
+    height: inherit;
+    list-style: none;
+    float: left;
+    text-align: center;
+    padding-top: 30px;
+    font-family: arial;
+    font-size: 1.3em;
+    color: #ffffff;
+}
+
+#menu ul li:hover{
+    background-color: chartreuse;
+    transition: 1s;
+    cursor: pointer;
+    color: #000000;
+}
+
+#redesSociais figure, #redesSociais figure img{
+    width: 45px;
+    height: 45px;
+    float: left;
+    margin-right: 5px;
+}
+
+
+#slogan{
+    width: 100%;
+    height: 500px;
+    /*Coloca uma imagem de fundo*/
+    background-image: url(../imagens/bookshelf-g1fc8a8fc0_1920.jpg);
+
+    /*Permite que a imagem não se repita caso for menor do que o espaço*/
+    background-repeat: no-repeat;
+
+    /*Permite alinhar a imagem dentro da div*/
+    background-position: center;
+    
+    /*Permite ajustar o tamanho da imagem em px, %, etc
+        cover - aplica um estilo de zoom na imagem, fazendo com que ela 
+        ocupe todo o espaço na div
+    */
+    background-size: cover;
+    
+    /*Permite travar a imagem no fundo para aplicar um efeito de transição
+        entre elementos
+    */
+    background-attachment: fixed;
+}
+
+#search{
+    background-color: darkkhaki;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+#search .principal{
+    padding-top: 25px;
+}
+
+#search label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    margin-right: 10px;
+}
+
+#search input#nomeLivro{
+    height: 30px;
+    width: 200px;
+    margin-right: 10px;
+
+    font-size: 1.3em;
+}
+
+#search input#pesquisar{
+    width: 90px;
+    height: 40px;
+    border-radius: 10px;
+
+    font-size: 1.3em;
+    background-color: #77b4f1;
+}
+
+#cardsBooks{
+    width: 100%;
+    height: auto;
+    background-color: darkkhaki;
+    overflow: hidden;
+}
+
+#cardsBooks .principal{
+    padding-top: 20px;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    background-color: #fff;
+    float: left;
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 50px #000;
+    padding-top: 10px;
+}
+
+.card figure{
+    width: 200px;
+    height: 280px;
+    margin: auto;
+    background-color: #1e8fff;
+}
+
+.card figure img{
+    width: inherit;
+    height: inherit;
+    margin: auto;
+}
+
+.card h2{
+    width: 75%;
+    height: 50px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.isbn, .valor{
+    width: 75%;
+    height: 25px;
+    margin: auto;
+    font-family: arial;
+    font-size: 1em;
+    /*Padroniza a tag span para ser um elemento de container*/
+    display: block;
+}
+
+.valor{
+    margin-bottom: 20px;
+}
+
+.comprar{
+    width: 150px;
+    height: 40px;
+    background-color: darkgreen;
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.comprar:hover{
+    background-color: #000000;
+    color: forestgreen;
+}
+
+
