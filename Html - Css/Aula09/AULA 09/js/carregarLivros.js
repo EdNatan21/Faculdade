@@ -7,6 +7,7 @@
  **********************************************************/
 
 var botaoPesquisar = document.getElementById('pesquisar')
+
 //Retorna todos os livros
 const getLivros = function(){
     let url = 'http://localhost:8080/livros';
@@ -43,7 +44,7 @@ const createCard = function(dados){
 
     conteudo.innerText = ''
 
-    //Entra no atributo livros do JSON e percorre o array de todod os livros
+    //Entra no atributo livros do JSON e percorre o array de todos os livros
     dados.livros.forEach(function(item){
 
     //############### CRIA OS ELEMENTOS HTML ######################
@@ -51,7 +52,7 @@ const createCard = function(dados){
     //Cria a div para receber os cards
         let card = document.createElement('div');
         //Atribui a propriedade class e coloca o valor card
-                //(Exatamente igaul criamos no HTML)
+                //(Exatamente igual criamos no HTML)
         card.setAttribute('class', 'card');
     
     //Cria o elemento figure
@@ -106,7 +107,7 @@ const createCard = function(dados){
 
 }
 
-window.addEventListener('load', function(){ getLivros();})
+window.addEventListener('load', function(){getLivros();})
 botaoPesquisar.addEventListener('click', function(){
     let nome = document.getElementById('nomeLivro').value
     if (nome == '')
