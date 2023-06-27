@@ -2440,5 +2440,5 @@ module.exports = {
 }
 
 
-// console.log(getLivros('java'));
+console.log(getLivros);
 

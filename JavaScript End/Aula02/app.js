@@ -1,6 +1,6 @@
 //Import dos arquivos e funções
 var readline = require('readline')
-var entradaDados = require('./Modulo/Tabuada')
+var matematica = require('./Modulo/Tabuada')
 
 var entradaDados = readline.createInterface({
     input : process.stdin,
